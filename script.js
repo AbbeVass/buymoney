@@ -11,3 +11,5 @@ function buy() {
         }, 2000);
     }
 }
+
+document.addEventListener("keydown", () => { buy() })
