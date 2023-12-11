@@ -12,4 +12,8 @@ function buy() {
     }
 }
 
-document.addEventListener("keydown", () => { buy() })
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        buy();
+    }
+});
