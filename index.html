@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Köp Pengar</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://archive.unews.utah.edu/wp-content/uploads/2021/03/Cash.jpg');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2, h1 {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.626);
+        }
+        h2 {
+            margin: 100px 0 0 0;
+            font-size: 50px;
+            padding-top: 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 70px;
+            font-family:'Lucida Sans';
+            padding-bottom: 10px;
+        }
+
+        #amount, #buy-btn {
+            width: 350px;
+            height: 50px;
+            border: 3px solid black;
+            border-radius: 50px;
+            font-size: 20px;
+            background-color: rgb(120, 255, 120);
+            margin-top: 50px;
+            padding: 0 25px;
+            margin-left: calc(50% - 200px);
+        }
+        #amount::placeholder {
+            color: black;
+            text-align: center;
+        }
+        #amount:focus,
+        #buy-btn:active {
+            outline: none;
+            background-color: rgb(204, 255, 204);
+        }
+        #amount::-webkit-outer-spin-button,
+        #amount::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        #buy-btn {
+            width: 100px;
+            margin-left: calc(50% - 50px);
+            cursor: pointer;
+        }
+        .popup-container {
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+        .popup {
+            background-color: rgb(226, 226, 226);
+            font-size: 20px;
+            padding: 7px 15px 10px;
+            border: 2px solid black;
+            border-radius: 20px;
+            margin-top: 5px;
+            width: 175px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Välkommen till</h2>
+    <h1>köppengar.com</h1>
+    <input type="number" placeholder="Hur mycket pengar vill du köpa?" id="amount">
+    <button id="buy-btn" onclick="buy()">Köp</button>
+    <div class="popup-container"></div>
+
+    <script>
+        const amount = document.getElementById("amount");
+        function buy() {
+            if (amount.value) {
+                var popup = document.createElement("div");
+                popup.className = "popup";
+                popup.innerHTML = "Din köp på " + amount.value + " kr är nu genomfört &#128077;";
+                const container = document.querySelector(".popup-container");
+                container.appendChild(popup);
+                setTimeout(function() {
+                    container.removeChild(popup);
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
