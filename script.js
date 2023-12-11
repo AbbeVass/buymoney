@@ -3,7 +3,7 @@ function buy() {
     if (amount.value) {
         var popup = document.createElement("div");
         popup.className = "popup";
-        popup.innerHTML = "Din köp på " + amount.value + " kr är nu genomfört &#128077;";
+        popup.innerHTML = "Your purchase of $" + amount.value + " is now complete &#128077;";
         const container = document.querySelector(".popup-container");
         container.appendChild(popup);
         setTimeout(function() {
