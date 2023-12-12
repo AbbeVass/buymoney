@@ -1,0 +1,45 @@
+@media (max-width: 1000px) {
+    h2 {
+        font-size: 35px;
+    }
+    h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #amount {
+        width: 250px;
+        height: 35px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    #buy-btn {
+        width: 60px;
+        height: 35px;
+        font-size: 14px;
+        padding: 0;
+    }
+    .popup-container {
+        align-items: center;
+        width: 100%;
+    }
+    .popup {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    h2 {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+}

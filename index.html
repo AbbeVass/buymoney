@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/RWD.css">
     <title>Buy money</title>
 </head>
 <body>
     <h2>Welcome to</h2>
     <h1>buymoney.store</h1>
-    <input type="number" placeholder="How much money do you want to buy?" id="amount">
-    <button id="buy-btn" onclick="buy()">Buy</button>
+    <div id="input-container">
+        <input type="number" placeholder="How much money do you want to buy?" id="amount">
+        <button id="buy-btn" onclick="buy()">Buy</button>
+    </div>
+
     <div class="popup-container"></div>
+    <div id="message">We are currently experiencing delays in delivery</div>
 
     <script src="script.js"></script>
 </body>
