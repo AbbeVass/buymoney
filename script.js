@@ -1,7 +1,7 @@
 const amount = document.getElementById("amount");
 function buy() {
     if (amount.value) {
-        var popup = document.createElement("div");
+        let popup = document.createElement("div");
         popup.className = "popup";
         popup.innerHTML = "Your purchase of $" + amount.value + " is now complete &#128077;";
         const container = document.querySelector(".popup-container");
@@ -31,6 +31,13 @@ document.addEventListener("keydown", function(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(function() {
-        document.getElementById("message").style.right = "5px";
+        let messageBox = document.createElement("div");
+        messageBox.id = "message";
+        messageBox.innerHTML = "We are currently experiencing delays in delivery";
+        document.body.appendChild(messageBox);
+        
+        setTimeout(function() { // Make sure the div is loaded before moving it
+            document.getElementById("message").style.right = "5px";
+        }, 100);
     }, 20000);
 });
