@@ -1,3 +1,2 @@
 # buymoney
 
-Lägg till ikon

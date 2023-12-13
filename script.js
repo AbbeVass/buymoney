@@ -1,5 +1,8 @@
 const amount = document.getElementById("amount");
 function buy() {
+    while (amount.value.substring(0, 1) == 0) { // Remove all zeros at the start of the string
+        amount.value = amount.value.substring(1, amount.value.length);
+    }
     if (amount.value) {
         let popup = document.createElement("div");
         popup.className = "popup";
@@ -13,7 +16,6 @@ function buy() {
 }
 
 const numberMap = ["1","2","3","4","5","6","7","8","9","0"];
-
 document.addEventListener("keydown", function(event) {
     if (amount == document.activeElement) { // If the amount input is focused
         if (numberMap.includes(event.key)) {
